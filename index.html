@@ -7,8 +7,16 @@
     <title>App node</title>
 </head>
 <body>
-    <h1>Aplicaciones con node </h1>
-    <h2>Primer cambio desde el local</h2>
-    <h3>Segundo cambio realiado desde local</h3>
-</body>
+
+    <script>
+
+        var http = require('http');
+
+        http.createServer(function (req, res) {
+            res.writeHead(200, {'Content-Type': 'text/plain'});
+            res.end('Hello World!');
+        }).listen(8080);
+
+    </script>
+   
 </html>
